@@ -229,16 +229,34 @@ export const projects = [
 ]  
 
 export const contactInfo = [
-  {
+    {
     icon: <Phone className="w-6 h-6 text-emerald-400" />,
     title: "Phone",
-    content: "(+55) 15 99713-5106",
+    content: (
+      <a 
+        href="https://wa.me/5515997135106" 
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-emerald-400 transition-colors duration-200"
+      >
+        (+55) 15 99713-5106
+      </a>
+    ),
     bg: "bg-emerald-400/10"
   },
   {
     icon: <Mail className="w-6 h-6 text-emerald-400" />,
     title: "Email",
-    content:  "pedrohdiasdev@gmail.com",
+    content: (
+      <a 
+        href="mailto:pedrohdiasdev@gmail.com" 
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-emerald-400 transition-colors duration-200"
+      >
+        pedrohdiasdev@gmail.com
+      </a>
+    ),
     bg: "bg-emerald-400/10"
   }
 ]

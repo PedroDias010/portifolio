@@ -12,13 +12,13 @@ interface Stat {
 }
 
 const stats: Stat[] = [
-  { number: 1, label: "Anos de Experiência" },
+  {  number: 1, label: "Anos de Experiência" },
   { number: 1, label: "Projetos Concluídos" },
   { number: 15, label: "Tecnologias Dominadas" },
 ];
 
 export default function Hero() {
-  return (
+  return (    
     <section className="relative min-h-screen bg-gray-950 text-white overflow-hidden pt-20">
       {/* Fundo tecnológico com gradiente + linhas */}
       <div className="absolute inset-0 bg-gradient-to-b from-emerald-900/20 via-gray-950 to-black" />
