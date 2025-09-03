@@ -115,7 +115,7 @@ export default function Contact() {
             Vamos Trabalhar Juntos?
           </h1>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Entre em contato para discutir seu projeto e como posso ajudar a transformar suas ideias em realidade.
+            Entre em contato para discutir seu projeto, oportunidades de parceria ou vagas de emprego. Estou pronto para ajudar a transformar suas ideias em realidade e aberto a novas oportunidades profissionais.
           </p>
         </motion.div>
 
