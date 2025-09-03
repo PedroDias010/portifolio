@@ -2,7 +2,7 @@
 
 import { services } from '@/app/lib/constants'
 import { motion } from 'framer-motion'
-import { Check, ArrowRight, Star } from 'lucide-react'
+import { Check, ArrowRight } from 'lucide-react'
 
 export default function Services() {
    return (

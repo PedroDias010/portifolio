@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form"
 import { motion } from "framer-motion"
 import { contactInfo } from "../lib/constants"
 import { toast } from "sonner"
-import { Phone, Mail, Send, ArrowRight } from "lucide-react"
+import { Send, ArrowRight } from "lucide-react"
 
 type FormData = {
   firstName: string
@@ -102,7 +102,7 @@ export default function Contact() {
   }
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-950 text-white pt-20 pb-16 px-4">
+    <section className="min-h-screen bg-gradient-to-br bg-gray-950/95 to-gray-950 text-white pt-20 pb-16 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Cabeçalho */}
         <motion.div 
