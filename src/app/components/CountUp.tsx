@@ -2,7 +2,7 @@ import { useRef, useEffect } from 'react';
 import { useInView, useMotionValue, useTransform, animate, motion } from 'framer-motion';
 
 export default function CountUp({ value, className }: { value: number; className?: string }) {
-  const ref = useRef<HTMLSpanElement>(null); // Tipando o ref como HTMLSpanElement
+  const ref = useRef<HTMLSpanElement>(null); 
   const isInView = useInView(ref);
   const count = useMotionValue(0);
   const rounded = useTransform(count, (latest) => Math.round(latest));

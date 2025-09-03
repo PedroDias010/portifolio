@@ -44,7 +44,7 @@ export const menuItems = [
 export const services = [
   {
     number: "01",
-    Icon: <Code2 size={32}/>,
+    Icon: Code2,
     title: "Front-end",
     description: "Desenvolvedor Front-End especializado em criar interfaces modernas, responsivas e de alto desempenho. Transformo designs complexos em experiências web fluidas e interativas usando HTML, CSS, JavaScript, Tailwind CSS, React, Next.js, Vue e Framer Motion. Meu foco é desenvolver aplicações responsivas (mobile-first), com animações suaves e otimizadas para SEO, entregando interfaces visualmente atraentes, funcionais e acessíveis.",   
     features: ["React", "Next.js", "Node.js", "Typescript", "Vue.js", "Frame-motion"]
@@ -52,7 +52,7 @@ export const services = [
 
   {
     number: "02",
-    Icon: <Palette size={32}/>,
+    Icon: Palette,
     title: "IU/UX Design",
     description: "Designer UI/UX focado em criar interfaces intuitivas e centradas no usuário, da pesquisa à prototipagem e design final. Atuo com pesquisa de usuário, wireframes, protótipos e design systems no Figma, Adobe XD e Sketch. Meu objetivo é unir usabilidade e estética para resolver problemas reais, criar conexões emocionais e entregar resultados eficazes.",
     features: ["Figma", "Prototyping", "Wireframing"]
@@ -60,7 +60,7 @@ export const services = [
 
   {
     number: "03",
-    Icon: <PenTool size={32}/>,
+    Icon: PenTool,
     title: "Backend",
     description: "Desenvolvedor Back-End especializado na construção de APIs robustas, escaláveis e de alta performance. Utilizo JavaScript, TypeScript, Python e C# com frameworks como Node.js, Nest.js, Flask, FastAPI, .NET e Spring para desenvolver APIs RESTful, GraphQL e soluções em tempo real com WebSockets. Meu foco é criar sistemas bem estruturados, seguros, eficientes e prontos para escalar, garantindo alta qualidade e desempenho.",
     features: ["Python", "FastAPI", "C#", ".NET",".NET Core", "Postgree", "MongoDB", 
