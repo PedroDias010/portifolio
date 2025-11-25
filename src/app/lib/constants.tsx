@@ -191,7 +191,7 @@ export const projects = [
     image: "/senshi/Login.png",
     additionalImages: [
       "/senshi/Login.png",
-       "/senshi/Cadastro.mp4",
+      "/senshi/Cadastro.mp4",
       "/senshi/Esquecer senha.png",
       "/senshi/Parte do adm.mp4",
       "/senshi/Dashboard Aluno.png",

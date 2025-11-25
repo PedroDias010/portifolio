@@ -4,15 +4,20 @@ import { motion } from "framer-motion";
 import { useParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import { projects } from "@/app/lib/constants";
-import { Github, ExternalLink, ArrowLeft, CheckCircle2 } from "lucide-react";
+import { Github, ExternalLink, ArrowLeft, CheckCircle2, Play } from "lucide-react";
 import { useState } from "react";
 
 export default function ProjectDetails() {
     const params = useParams();
     const router = useRouter();
-    const [selectedImage, setSelectedImage] = useState(0);
+    const [selectedMedia, setSelectedMedia] = useState(0);
 
     const project = projects.find(p => p.id === params.id);
+
+    // Helper function to check if media is a video
+    const isVideo = (url: string) => {
+        return url.endsWith('.mp4') || url.endsWith('.webm') || url.endsWith('.ogg');
+    };
 
     if (!project) {
         return (
@@ -93,45 +98,74 @@ export default function ProjectDetails() {
                     </div>
                 </motion.div>
 
-                {/* Main image gallery */}
+                {/* Main media gallery */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                     className="mb-12"
                 >
-                    <div className="relative aspect-video rounded-2xl overflow-hidden bg-gray-900 border border-gray-800 mb-4">
-                        <Image
-                            src={project.additionalImages[selectedImage]}
-                            alt={`${project.title} - Imagem ${selectedImage + 1}`}
-                            fill
-                            className="object-cover"
-                            sizes="(max-width: 1280px) 100vw, 1280px"
-                            priority
-                        />
+                    <div className="relative rounded-2xl overflow-hidden bg-gray-900 border border-gray-800 mb-4">
+                        {isVideo(project.additionalImages[selectedMedia]) ? (
+                            <video
+                                src={project.additionalImages[selectedMedia]}
+                                controls
+                                autoPlay
+                                loop
+                                muted
+                                className="w-full h-auto"
+                            >
+                                Seu navegador não suporta vídeos.
+                            </video>
+                        ) : (
+                            <div className="relative w-full" style={{ aspectRatio: 'auto' }}>
+                                <Image
+                                    src={project.additionalImages[selectedMedia]}
+                                    alt={`${project.title} - Imagem ${selectedMedia + 1}`}
+                                    width={1280}
+                                    height={720}
+                                    className="w-full h-auto object-contain"
+                                    sizes="(max-width: 1280px) 100vw, 1280px"
+                                    priority
+                                />
+                            </div>
+                        )}
                     </div>
 
-                    {/* Image thumbnails */}
+                    {/* Media thumbnails */}
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                        {project.additionalImages.map((img, index) => (
+                        {project.additionalImages.map((media, index) => (
                             <motion.button
                                 key={index}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                onClick={() => setSelectedImage(index)}
+                                onClick={() => setSelectedMedia(index)}
                                 className={`relative aspect-video rounded-lg overflow-hidden border-2 transition-all ${
-                                    selectedImage === index
+                                    selectedMedia === index
                                         ? 'border-emerald-400'
                                         : 'border-gray-800 hover:border-gray-600'
                                 }`}
                             >
-                                <Image
-                                    src={img}
-                                    alt={`Thumbnail ${index + 1}`}
-                                    fill
-                                    className="object-cover"
-                                    sizes="300px"
-                                />
+                                {isVideo(media) ? (
+                                    <div className="relative w-full h-full bg-gray-800 flex items-center justify-center">
+                                        <video
+                                            src={media}
+                                            className="w-full h-full object-cover"
+                                            muted
+                                        />
+                                        <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                                            <Play size={32} className="text-white" fill="white" />
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <Image
+                                        src={media}
+                                        alt={`Thumbnail ${index + 1}`}
+                                        fill
+                                        className="object-cover"
+                                        sizes="300px"
+                                    />
+                                )}
                             </motion.button>
                         ))}
                     </div>
