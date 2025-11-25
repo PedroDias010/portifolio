@@ -192,12 +192,12 @@ export const projects = [
     additionalImages: [
       "/senshi/Login.png",
       "/senshi/Cadastro.mp4",
-      "/senshi/Esquecer senha.png",
-      "/senshi/Parte do adm.mp4",
-      "/senshi/Dashboard Aluno.png",
-      "/senshi/Ver Planos Aluno.mp4",
-      "/senshi/Agendamento de aula aluno.mp4",
-      "/senshi/Editar PErfil.mp4",
+      "/senshi/Esquecer%20senha.png",
+      "/senshi/Parte%20do%20adm%20.mp4",
+      "/senshi/Dashboard%20Aluno.png",
+      "/senshi/Ver%20Planos%20Aluno.mp4",
+      "/senshi/Agendamento%20de%20aula%20aluno.mp4",
+      "/senshi/Editar%20PErfil.mp4",
     ],
     technologies: ["Next.js + TypeScript", ".NET + C#", "Deploy no Render", "PostgreSQL", "JWT Authentication", "Docker", "Tailwind CSS + shadcn/ui"],
     features: [
