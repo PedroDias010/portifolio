@@ -181,25 +181,77 @@ export const skillsData = [
 ]
 
 export const projects = [
+
   {
     number: "01",
+    id: "senshi-academy",
+    title: "Senshi Academy",
+    description: "Um site de uma academia de kickboxing, feito para gerenciar alunos, agendamentos de aulas e pagamentos.",
+    detailedDescription: "A Senshi Academy é uma plataforma completa de gestão para academias de kickboxing. O projeto foi desenvolvido com foco em performance, segurança e experiência do usuário, utilizando as melhores práticas de desenvolvimento moderno. A aplicação permite o gerenciamento completo de alunos, controle de presenças, agendamento de aulas, gestão de pagamentos e muito mais.",
+    image: "/senshi/Login.png",
+    additionalImages: [
+      "/senshi/Login.png",
+       "/senshi/Cadastro.mp4",
+      "/senshi/Esquecer senha.png",
+      "/senshi/Parte do adm.mp4",
+      "/senshi/Dashboard Aluno.png",
+      "/senshi/Ver Planos Aluno.mp4",
+      "/senshi/Agendamento de aula aluno.mp4",
+      "/senshi/Editar PErfil.mp4",
+    ],
+    technologies: ["Next.js + TypeScript", ".NET + C#", "Deploy no Render", "PostgreSQL", "JWT Authentication", "Docker", "Tailwind CSS + shadcn/ui"],
+    features: [
+      "Sistema completo de autenticação e autorização com JWT",
+      "Gestão de alunos com perfis detalhados",
+      "Agendamento de aulas com calendário interativo",
+      "Controle de pagamentos e mensalidades",
+      "Dashboard com estatísticas em tempo real",
+      "Interface responsiva e moderna",
+      "Integração com banco de dados PostgreSQL",
+      "Deploy automatizado com Docker"
+    ],
+    challenges: [
+      "Implementação de um sistema robusto de autenticação",
+      "Otimização de queries para melhor performance",
+      "Criação de uma interface intuitiva e responsiva",
+      "Integração entre frontend Next.js e backend .NET"
+    ],
+    demoLink: "#",
+    githubLink: "https://github.com/PedroDias010/senshiacademy.git"
+  },
+
+  {
+    number: "02",
+    id: "lsd-extrator",
     title: "LSD-Extrator de Dados",
     description: "Desenvolvimento de uma aplicação web robusta e escalável com FastAPI, integrada à API do Gemini para extrair automaticamente campos de notas fiscais. Suporta upload de arquivos JPG, PNG e PDF, identificando dados como número da nota, data e valor total. Ideal para automação financeira e gestão de documentos, com interface amigável, alta precisão e desempenho otimizado para grande escala.",
+    detailedDescription: "O LSD-Extrator de Dados é uma solução inovadora que utiliza Inteligência Artificial para automatizar a extração de informações de notas fiscais. Desenvolvido com FastAPI e integrado à API do Google Gemini, o sistema processa documentos em diversos formatos (JPG, PNG, PDF) e extrai automaticamente campos importantes como número da nota, data de emissão, valor total, CNPJ do emissor, entre outros dados relevantes.",
     image: "/work/extracao.png",
+    additionalImages: [
+      "/work/extracao.png",
+      "/work/extracao.png",
+    ],
     technologies: ["Python", "fastAPI", "Google Gimini", "PostgreSQL"],
+    features: [
+      "Extração automática de dados usando IA (Google Gemini)",
+      "Suporte para múltiplos formatos: JPG, PNG e PDF",
+      "Interface de upload intuitiva e responsiva",
+      "Processamento assíncrono para melhor performance",
+      "Armazenamento seguro em PostgreSQL",
+      "API RESTful bem documentada",
+      "Sistema de validação de dados extraídos",
+      "Alta taxa de precisão na extração"
+    ],
+    challenges: [
+      "Integração eficiente com a API do Google Gemini",
+      "Otimização do processamento de imagens grandes",
+      "Tratamento de diferentes formatos e layouts de notas fiscais",
+      "Implementação de sistema de validação e correção de dados"
+    ],
     demoLink: "https://github.com/PedroDias010/LSD.git",
     githubLink: "https://github.com/PedroDias010/LSD.git"
   },
-  /*{
-    number: "02",
-    title: "TaskFlow",
-    description: "Aplicativo de gestão de projetos e tarefas com funcionalidades de Kanban, timeline e colaboração em tempo real.",
-    image: "/work/thumb2.png",
-    technologies: ["React", "Node.js", "Socket.io", "MongoDB", "Redux"],
-    demoLink: "https://taskflow.demo.com",
-    githubLink: "https://github.com/seu-usuario/taskflow"
-  },
-  {
+ /* {
     number: "03",
     title: "CodeBlog",
     description: "Blog técnico com CMS headless, sistema de comentários, pesquisa avançada e analytics integrado.",

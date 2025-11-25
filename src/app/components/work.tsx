@@ -4,7 +4,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { projects } from "../lib/constants";
-import {  Github, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import { Github, ChevronLeft, ChevronRight, ExternalLink, Info } from "lucide-react";
+import Link from "next/link";
 
 export default function Work() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -198,17 +199,28 @@ export default function Work() {
                                 </div>
                                 
                                 {/* Project links */}
-                                <div className="flex gap-4 pt-4">
+                                <div className="flex flex-wrap gap-3 pt-4">
+                                    <Link href={`/work/${project.id}`} passHref>
+                                        <motion.div
+                                            whileHover={{ scale: 1.05 }}
+                                            whileTap={{ scale: 0.95 }}
+                                            className="flex items-center gap-2 bg-emerald-400 text-gray-900 py-3 px-6 rounded-full font-medium hover:bg-emerald-300 transition-colors cursor-pointer"
+                                        >
+                                            <Info size={16} />
+                                            Ver Detalhes
+                                        </motion.div>
+                                    </Link>
+                                    
                                     <motion.a
                                         href={project.demoLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.95 }}
-                                        className="flex items-center gap-2 bg-emerald-400 text-gray-900 py-3 px-6 rounded-full font-medium hover:bg-emerald-300 transition-colors"
+                                        className="flex items-center gap-2 bg-gray-800 text-white py-3 px-6 rounded-full font-medium hover:bg-gray-700 transition-colors border border-gray-700"
                                     >
                                         <ExternalLink size={16} />
-                                        Ver Projeto
+                                        Ver Demo
                                     </motion.a>
                                     
                                     <motion.a
@@ -220,7 +232,7 @@ export default function Work() {
                                         className="flex items-center gap-2 bg-gray-800 text-white py-3 px-6 rounded-full font-medium hover:bg-gray-700 transition-colors border border-gray-700"
                                     >
                                         <Github size={16} />
-                                        Código Fonte
+                                        Código
                                     </motion.a>
                                 </div>
                             </div>
