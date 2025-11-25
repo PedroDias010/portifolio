@@ -13,8 +13,8 @@ interface Stat {
 }
 
 const stats: Stat[] = [
-  { number: 1, label: "Anos de Experiência" },
-  { number: 1, label: "Projetos Concluídos" },
+  { number: 2, label: "Anos de Experiência" },
+  { number: 2, label: "Projetos Concluídos" },
   { number: 15, label: "Tecnologias Dominadas" },
 ];
 
