@@ -80,7 +80,7 @@ export default function NavBar() {
                             transition={{ delay: 0.3 }}
                         >
                             <MotionLink
-                                href="/Curriculo-Pedro Dias.pdf"
+                                href="/Curriculo-Pedro%20Dias.pdf"
                                 download
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
@@ -172,7 +172,7 @@ export default function NavBar() {
                                 className="pt-4 border-t border-gray-800 space-y-3"
                             >
                                 <Link 
-                                    href="/Curriculo-Pedro Dias.pdf"
+                                    href="/Curriculo-Pedro%20Dias.pdf"
                                     download
                                     className="flex items-center justify-center gap-2 w-full bg-emerald-400/10 text-emerald-400 border border-emerald-400/20 py-3 px-6 rounded-full font-medium hover:bg-emerald-400/20 transition-colors"
                                     onClick={() => setIsMenuOpen(false)}

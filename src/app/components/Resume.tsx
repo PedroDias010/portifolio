@@ -152,7 +152,7 @@ export default function Resume() {
 
               {/* Download CV Button */}
               <motion.a
-                href="/Curriculo-Pedro Dias.pdf"
+                href="/Curriculo-Pedro%20Dias.pdf"
                 download
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}

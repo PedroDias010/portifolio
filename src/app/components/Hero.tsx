@@ -150,7 +150,7 @@ export default function Hero() {
               className="flex flex-col sm:flex-row items-center gap-6 lg:gap-8"
             >
               <motion.a
-                href="/Curriculo-Pedro Dias.pdf"
+                href="/Curriculo-Pedro%20Dias.pdf"
                 download
                 whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(16,185,129,0.6)" }}
                 whileTap={{ scale: 0.95 }}
