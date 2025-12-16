@@ -17,10 +17,7 @@ const eslintConfig = [
       ".next/**",
       "out/**",
       "build/**",
-      "next-env.d.ts",
-      {
-        "css.lint.unknownAtRules": "ignore"
-      }
+      "next-env.d.ts"
     ],
   },
 ];
