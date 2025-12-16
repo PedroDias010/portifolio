@@ -23,7 +23,7 @@ export const socialLinks = [
 
 export const stats = [
   { number: "2", text: "Anos de Experiência" },
-  { number: "3", text: "Projetos Concluídos" },
+  { number: "4", text: "Projetos Concluídos" },
   { number: "12", text: "Tecnologias Dominadas"},
 
 ];
@@ -250,6 +250,47 @@ export const projects = [
     ],
     demoLink: "https://github.com/PedroDias010/LSD.git",
     githubLink: "https://github.com/PedroDias010/LSD.git"
+  },
+
+  {
+    number: "03",
+    id: "portsafe",
+    title: "PortSafe - Sistema Inteligente de Gestão de Entregas",
+    description: "API REST completa em .NET 9.0 para automatizar e otimizar o gerenciamento de entregas em condomínios, reduzindo significativamente a sobrecarga operacional das portarias.",
+    detailedDescription: "PortSafe é um sistema completo de gestão de entregas para condomínios que revoluciona a forma como encomendas são gerenciadas. Desenvolvido com .NET 9.0 e Clean Architecture, o sistema oferece uma solução moderna e escalável para resolver problemas reais como perda de encomendas, filas na portaria e dificuldade de rastreamento.",
+    image: "/portsafe/0.png",
+    additionalImages: [
+      "/portsafe/0.png",
+      "/portsafe/1.png",
+      "/portsafe/2.png",
+      "/portsafe/3.png",
+      "/portsafe/4.png",
+      "/portsafe/5.mp4",
+      "/portsafe/6.png",
+      "/portsafe/7.png",
+      "/portsafe/8.png",
+      "/portsafe/9.png",
+    ],
+    technologies: ["ASP.NET Core 9.0", "Entity Framework Core", "PostgreSQL", "Google Gemini API", "JWT Authentication", "Docker", "Docker Compose", "Gmail API"],
+    features: [
+      "Sistema de armários inteligentes com controle de status em tempo real",
+      "Validação automática de destinatários com IA (Google Gemini)",
+      "Geração automatizada de códigos de entrega e senhas de acesso",
+      "Notificações via WhatsApp e email para moradores",
+      "Chatbot inteligente para consultas sobre entregas",
+      "Sistema de autenticação JWT com gestão de perfis",
+      "Fluxo completo de rastreamento de entregas",
+      "Suporte a diferentes tipos de unidades (casas e apartamentos)",
+      "Clean Architecture com separação clara de responsabilidades"
+    ],
+    challenges: [
+      "Implementação de sistema de validação com IA para destinatários",
+      "Integração com múltiplos serviços (Gmail, WhatsApp, Gemini)",
+      "Gerenciamento de estados complexos dos armários",
+      "Criação de sistema de notificações multi-canal eficiente"
+    ],
+    demoLink: "#",
+    githubLink: "#"
   },
  /* {
     number: "03",

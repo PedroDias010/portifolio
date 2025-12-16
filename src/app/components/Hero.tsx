@@ -5,7 +5,7 @@ import { Download } from "lucide-react";
 import Image from "next/image";
 import CountUp from "./CountUp";
 import { socialLinks } from "../lib/constants";
-import { useMemo } from "react";
+import { useState, useEffect } from "react";
 
 interface Stat {
   number: number;
@@ -20,8 +20,19 @@ const stats: Stat[] = [
 
 // Componente para partículas que evita problemas de hidratação
 const Particles = () => {
-  const particles = useMemo(
-    () =>
+  const [particles, setParticles] = useState<Array<{
+    id: number;
+    width: number;
+    height: number;
+    top: number;
+    left: number;
+    duration: number;
+    delay: number;
+    moveX: number;
+  }>>([]);
+
+  useEffect(() => {
+    setParticles(
       [...Array(30)].map((_, i) => ({
         id: i,
         width: Math.random() * 4 + 1,
@@ -30,9 +41,12 @@ const Particles = () => {
         left: Math.random() * 100,
         duration: Math.random() * 8 + 4,
         delay: Math.random() * 3,
-      })),
-    []
-  );
+        moveX: Math.random() * 20 - 10,
+      }))
+    );
+  }, []);
+
+  if (particles.length === 0) return null;
 
   return (
     <div className="absolute inset-0 opacity-30">
@@ -48,7 +62,7 @@ const Particles = () => {
           }}
           animate={{
             y: [0, -30, 0],
-            x: [0, Math.random() * 20 - 10, 0],
+            x: [0, particle.moveX, 0],
             opacity: [0, 1, 0],
             scale: [0, 1, 0],
           }}
